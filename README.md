@@ -1,5 +1,4 @@
 # SS-segment
-#  Solution-Mixture-Analysis
 This repository contains analysis scripts related to the methods described in our recent paper. The provided codes facilitate the analysis of polymer bulk structures and solution-phase behavior.
 
 ##  Project Structure
