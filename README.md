@@ -28,15 +28,28 @@ After generating the polymer-solution interface, this section covers additional 
 
 ##  Analysis scripts
 ###  1. Density Profile Analysis (```density_profile.ipynb```)
--  Reads the **tpr** and **gro** files of the solution structure.
+-  Reads the `.tpr` and `.gro` files of the solution structure.
 -  Computes the density profile of **polymer, AA, NMP, and water**.
 -  Determines the interface position based on the density distribution.
+
+![image](https://github.com/user-attachments/assets/e86a166e-29f9-416d-86e4-1b3971601f39)
+
 ###  2.  $\pi-\pi$ Stacking Analysis (```pi-pi-stacking.ipynb```)
 -  Reads the bulk structure data (```bulk.tpr``` and ```bulk_pbc.gro```)
--  Analyzes the number of **$\pi-\pi$ stacking interactioins** and classifies them into different stacking types.
+quantifies the number of **π–π stacking interactions** and classifies them into distinct stacking types based on geometric criteria. A π–π stacking interaction is defined by satisfying all of the following conditions:
+    1. The angle between the normal vectors of the two planar segments is **less than 10°**.
+    2. The interplanar distance ($D_{\pi\text{--}\pi}$) is **less than 15 Å**.
+    3. Both the **horizontal** and **vertical distances** are **less than 5 Å**.
+The definitions of $D_{\pi\text{--}\pi}$ and horizontal displacement are illustrated in the schematic diagram below.
+![image](https://github.com/user-attachments/assets/1cfccffb-885e-40bf-840e-a99718516694)
+
+-  Polymer segments are classified into 3 categories, and $\pi-\pi$ stacking interactions are identified based on pairwise combinations of these segments. The number of interactions for each stacking type and the total number of $\pi-\pi$ stackings are then calculated.
+![image](https://github.com/user-attachments/assets/25160077-ec2a-44b4-99dc-9d2d07d34e6b)
+
 -  Generates the **backbone structure** for validation of atom selection groups. (```backbone.gro```)
 -  Outputs a **gro file** containing the identified $\pi-\pi$ stacking structures. (```PSO2-pipi.gro```)
 -  Saves the stacking classification results in a **text file** for further analysis. (```PSO2-pipi.txt```)
+
 ###  3.  Functional Group's Solution Environment Analysis (```sol_RDF.ipynb```, ```sol_env.ipynb```)
 -  Reads the **tpr** and **xtc** files from the trajectory.
 -  Selects atoms corresponding to **functional groups** for analysis.
