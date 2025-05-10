@@ -1,7 +1,8 @@
 #  Solution-Mixture-Analysis
 This repository contains analysis scripts related to the methods described in our recent paper. The provided codes facilitate the analysis of polymer bulk structures and solution-phase behavior.
 
-The 3 conjugated polymers (P-2O, P-SO2, PBDTTSO) invested here are the materials for organic hydrogen evolution reaction, as we mentioned in the paper.
+The three conjugated polymers investigated in this study—**P-2O**, **P-SO2**, and **PBDTTSO**—serve as materials for the organic hydrogen evolution reaction (HER), as described in our paper. To simulate the solution environment during the HER process, **AA**, **NMP**, and **H2O** molecules were added into the system during the solution-phase molecular dynamics (MD) simulations.
+
 
 ##  Project Structure
 - `Analysis_and_run/`: Contains all scripts used for data analysis.
@@ -55,6 +56,7 @@ The definitions of $D_{\pi\text{--}\pi}$ and horizontal displacement are illustr
 -  Selects atoms corresponding to **functional groups** for analysis.
 -  Computes the **volume fraction** of different solution molecules near functional groups and averages the results over the trajectory.
 -  Plots the **RDF** of solution moleucules around functional groups.
+
 ###  4.  Water Penetration Depth Analysis (```water_depth.ipynb```)
 -  Computes the **water density profile** for solutioin systems of three different polymers.
 -  Determines the **water interface positions** and generates a comparative plot of water penetration depth.
