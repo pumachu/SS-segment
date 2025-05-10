@@ -52,12 +52,56 @@ The definitions of $D_{\pi\text{--}\pi}$ and horizontal displacement are illustr
 -  Saves the stacking classification results in a **text file** for further analysis. (```PSO2-pipi.txt```)
 
 ###  3.  Functional Group's Solution Environment Analysis (```sol_RDF.ipynb```, ```sol_env.ipynb```)
--  Reads the **tpr** and **xtc** files from the trajectory.
--  Selects atoms corresponding to **functional groups** for analysis.
+-  Reads the `.tpr` and `.xtc` files from the `TRAJECTORY\` directory.
+-  Selects atoms corresponding to **functional groups** for analysis. The functinal groups used for each polymer are defined as follows:
+![image](https://github.com/user-attachments/assets/091acd77-1b2d-476b-bc1a-c2263021722f)
+####    P-SO2 functionl groups
+```
+S-Main:  resname PT* and name S2
+S-Side:  resname PT* and name S1 S3
+2O:      resname P2O and name O3 O4
+DBZ-SO2: resname PT* and name S5 O3 O4, resname P2O and name S1 O1 O2
+TSO-SO2: resname PT* and name S4 O1 O2
+```
+####    P-2O functional groups
+```
+S-Main:  resname PT* and name S2
+S-Side:  resname PT* and name S1 S3
+SO2:     resname SO2 and name S2 O3 O4, resname SO2 and name S3 O5 O6
+DBZ-SO2: resname PT* and name S5 O3 O4, resname SO2 and name S1 O1 O2
+TSO-SO2: resname PT* and name S4 O1 O2
+```
+####    PTO functional groups
+```
+S-Main:  resname PT* and name S2
+S-Side:  resname PT* and name S1 S3
+DBZ-SO2: resname PT* and name S5 O3 O4
+TSO-SO2: resname PT* and name S4 O1 O2
+```
+-  Calculates the center of mass**(COM)** of each functional group and of the solution molecules.
+-  Uses a **cutoff radius of 7.5Å to count solution molecules near each functional group:
+```python
+indices, distances = capped_distance(target_atoms, mol_com, max_cutoff=7.5, box=u.dimensions)
+```
 -  Computes the **volume fraction** of different solution molecules near functional groups and averages the results over the trajectory.
+![image](https://github.com/user-attachments/assets/1a349bda-7bfd-4861-a8c5-edf6ee4a650c)
 -  Plots the **RDF** of solution moleucules around functional groups.
+![image](https://github.com/user-attachments/assets/c2f0d9f7-da5f-4f5d-a33d-60881f41a62b)
 
 ###  4.  Water Penetration Depth Analysis (```water_depth.ipynb```)
--  Computes the **water density profile** for solutioin systems of three different polymers.
--  Determines the **water interface positions** and generates a comparative plot of water penetration depth.
+-  Reads the `.tpr` and `.gro` files from the `SOLUTION/` directory and computes the **water density profile** for solution systems containing three different polymers.
+-  Fits the water density profile using an **error function (erf)** curve:
+```python
+def error_function(x, A, g, x0):
+    return A * 0.5 * (special.erf(g * (x - x0) ) + 1)
+```
+-    Determines the **water interface positions** by solving the fitted curve for the points corresponding to **1%** and **99%** of the maximum water density, which represents the interface positions:
+```python
+def f(x, *p):
+    return p[0] * 0.5 * (special.erf(p[1] * (x - p[2])) + 1) - p[0]*0.01
+p0 = [310, 250,  250]
+root = fsolve(f, x0 = p0[n], args = p)- p[2]
+```
+-  Generates a comparative plot of water penetration depth and water density profiles across the three polymers.
+![image](https://github.com/user-attachments/assets/321526ca-708d-45c8-a2f4-a5e0f24d86ec)
 
