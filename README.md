@@ -29,9 +29,10 @@ After generating the polymer-solution interface, this section covers additional 
 
 ##  Analysis scripts
 ###  1. Density Profile Analysis (```density_profile.ipynb```)
--  Reads the `.tpr` and `.gro` files of the solution structure.
+-  Reads the `.tpr` and `.gro` files of the solution structure from `SOLUTION_MD/`.
 -  Computes the density profile of **polymer, AA, NMP, and water**.
--  Determines the interface position based on the density distribution.
+-  Determines the interface positions by locating the point where the polymer and water density curves reach **90%** of their maximum values.
+-  Plot density profiles and marks the interface positions on the graph.
 
 ![image](https://github.com/user-attachments/assets/e86a166e-29f9-416d-86e4-1b3971601f39)
 
