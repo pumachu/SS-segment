@@ -89,7 +89,8 @@ TSO-SO2: resname PT* and name S4 O1 O2
 indices, distances = capped_distance(target_atoms, mol_com, max_cutoff=7.5, box=u.dimensions)
 ```
 -  Computes the **volume fraction** of different solution molecules near functional groups and averages the results over the trajectory.
-![image](https://github.com/user-attachments/assets/bce2d1e7-aaaf-4a22-bcb1-a37fa63993ea)
+![image](https://github.com/user-attachments/assets/5fe02573-5bb6-4f9e-ad5e-629f89e02adc)
+
 
 -  Plots the **RDF** of solution moleucules around functional groups.
 ![RDF](https://github.com/user-attachments/assets/9d935c70-b38e-4339-99e3-4009213a1f39)
@@ -110,6 +111,7 @@ p0 = [310, 250,  250]
 root = fsolve(f, x0 = p0[n], args = p)- p[2]
 ```
 -  Generates a comparative plot of water penetration depth and water density profiles across the three polymers.
-![image](https://github.com/user-attachments/assets/de4b9de7-7d6b-43cf-a60f-d74bb059c582)
+![image](https://github.com/user-attachments/assets/b03bde51-51f7-42bc-9b1a-4f5dedc9fa27)
+
 
 
