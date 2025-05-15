@@ -2,3 +2,10 @@
 *.trr filter=lfs diff=lfs merge=lfs -text
 *.tpr filter=lfs diff=lfs merge=lfs -text
 *.gro filter=lfs diff=lfs merge=lfs -text
+Analysis_and_run/** filter=lfs diff=lfs merge=lfs -text
+FORCEFIELD/** filter=lfs diff=lfs merge=lfs -text
+TRAJECTORY/** filter=lfs diff=lfs merge=lfs -text
+QM_GAS_PHASE/** filter=lfs diff=lfs merge=lfs -text
+BULK_MD/** filter=lfs diff=lfs merge=lfs -text
+SOLUTION_MD/** filter=lfs diff=lfs merge=lfs -text
+README.md filter=lfs diff=lfs merge=lfs -text
