@@ -1,7 +1,7 @@
 #  Solution-Mixture-Analysis
 This repository contains analysis scripts related to the methods described in our recent paper. The provided codes facilitate the analysis of polymer bulk structures and solution-phase behavior.
 
-The three conjugated polymers investigated in this study—**P-2O**, **P-SO2**, and **PBDTTSO**—serve as materials for the organic hydrogen evolution reaction (HER), as described in our paper. To simulate the solution environment during the HER process, **AA**, **NMP**, and **H2O** molecules were added into the system during the solution-phase molecular dynamics (MD) simulations.
+The three conjugated polymers investigated in this study—**P-2O**, **P-2SO<sub>2</sub> (P-SO2)**, and **PBDTTSO**—serve as materials for the organic hydrogen evolution reaction (HER), as described in our paper. To simulate the solution environment during the HER process, **AA**, **NMP**, and **H2O** molecules were added into the system during the solution-phase molecular dynamics (MD) simulations.
 
 
 ##  Project Structure
@@ -9,8 +9,8 @@ The three conjugated polymers investigated in this study—**P-2O**, **P-SO2**, 
 - `FORCEFIELD/`: Includes topology files and forcefield parameters required for running GROMACS simulations.
 - `QM_GAS_PHASE/`: Contains Gaussian log files generated from neutral ground-state optimization calculations.
 - `BULK_MD/`: Provides sequential `mdp` and `gro` files used for generating bulk polymer structures for molecular dynamics (MD) simulations.
-- `SOLUTION_MD/`: Provides sequential `mdp` and `gro` files used for simulating the polymer-solvent interface in solution MD simulations.
-- `TRAJECTORY/`: Contains trajectory files resulting from the NPT simulations of the P-2O polymer solution.
+- `SOLUTION_MD/`: Provides sequential `mdp` and `gro` files used for simulating the polymer-solvent interface in solution MD simulations. 
+- `TRAJECTORY/`: Contains `xtc` files resulting from the NPT trajectory of the polymer solution.
 
 ##  MD_SIMULATIONS
 This section details the workflow and files involved in our molecular dynamics simulations. The flowchart of the entire MD simulation procedure is provided below:
