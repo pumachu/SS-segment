@@ -1,4 +1,4 @@
-#  Solution-Mixture-Analysis
+# pher-paper-2025-ss-segment
 This repository contains analysis scripts related to the methods described in our recent paper. The provided codes facilitate the analysis of polymer bulk structures and solution-phase behavior.
 
 The three conjugated polymers investigated in this study—**P-2O**, **P-2SO<sub>2</sub> (P-SO2)**, and **PBDTTSO**—serve as materials for the organic hydrogen evolution reaction (HER), as described in our paper. To simulate the solution environment during the HER process, **AA**, **NMP**, and **H2O** molecules were added into the system during the solution-phase molecular dynamics (MD) simulations.
