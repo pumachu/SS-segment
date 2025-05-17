@@ -14,7 +14,9 @@ The three conjugated polymers investigated in this study—**P-2O**, **P-2SO<sub
 
 ##  MD_SIMULATIONS
 This section details the workflow and files involved in our molecular dynamics simulations. The flowchart of the entire MD simulation procedure is provided below:
-![Workflow](https://github.com/user-attachments/assets/74f82740-237a-4e58-85b4-9855ea4d1a65)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/74f82740-237a-4e58-85b4-9855ea4d1a65"  width="800"/>
+</p>
 
 ###  BULK_MD
 This directory includes step-by-step processes for generating bulk polymer structures for all three polymers studied (P-2O, P-SO2, PBDTTSO). The bulk generation process is divided into two main stages:
@@ -35,7 +37,9 @@ After generating the polymer-solution interface, this section covers additional 
 -  Determines the interface positions by locating the point where the polymer and water density curves reach **90%** of their maximum values.
 -  Plot density profiles and marks the interface positions on the graph.
 
-![interface](https://github.com/user-attachments/assets/5d5323c9-b51e-437c-b65b-a4d6b7382883)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5d5323c9-b51e-437c-b65b-a4d6b7382883"  width="650"/>
+</p>
 
 
 ###  2.  $\pi-\pi$ Stacking Analysis (```pi-pi-stacking.ipynb```)
@@ -45,11 +49,16 @@ quantifies the number of **π–π stacking interactions** and classifies them i
     2. The interplanar distance ($D_{\pi\text{--}\pi}$) is **less than 15 Å**.
     3. Both the **horizontal** and **vertical distances** are **less than 5 Å**.
 The definitions of $D_{\pi\text{--}\pi}$ and horizontal displacement are illustrated in the schematic diagram below.
-![pi-pi stack](https://github.com/user-attachments/assets/752d090f-26ce-4d9a-b8d7-7b0e36ff3e2c)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/752d090f-26ce-4d9a-b8d7-7b0e36ff3e2c"  width="650"/>
+</p>
+
 
 
 -  Polymer segments are classified into 3 categories, and $\pi-\pi$ stacking interactions are identified based on pairwise combinations of these segments. The number of interactions for each stacking type and the total number of $\pi-\pi$ stackings are then calculated.
-![Segment](https://github.com/user-attachments/assets/c89d963a-eec9-4b3c-b548-6453ca1c92d9)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c89d963a-eec9-4b3c-b548-6453ca1c92d9"  width="650"/>
+</p>
 
 -  Generates the **backbone structure** for validation of atom selection groups. (```backbone.gro```)
 -  Outputs a **gro file** containing the identified $\pi-\pi$ stacking structures. (```PSO2-pipi.gro```)
@@ -58,7 +67,9 @@ The definitions of $D_{\pi\text{--}\pi}$ and horizontal displacement are illustr
 ###  3.  Functional Group's Solution Environment Analysis (```sol_RDF.ipynb```, ```sol_env.ipynb```)
 -  Reads the `.tpr` and `.xtc` files from the `TRAJECTORY\` directory.
 -  Selects atoms corresponding to **functional groups** for analysis. The functinal groups used for each polymer are defined as follows:
-![funtional group](https://github.com/user-attachments/assets/1718ad01-d6d9-4b62-89a9-4e1442404e3a)
+<p align="center">
+  <img src="](https://github.com/user-attachments/assets/1718ad01-d6d9-4b62-89a9-4e1442404e3a"  width="650"/>
+</p>
 
 ####    P-SO2 functionl groups
 ```
@@ -89,7 +100,10 @@ TSO-SO2: resname PT* and name S4 O1 O2
 indices, distances = capped_distance(target_atoms, mol_com, max_cutoff=7.5, box=u.dimensions)
 ```
 -  Computes the **volume fraction** of different solution molecules near functional groups and averages the results over the trajectory.
-![image](https://github.com/user-attachments/assets/5fe02573-5bb6-4f9e-ad5e-629f89e02adc)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5fe02573-5bb6-4f9e-ad5e-629f89e02adc"  width="200"/>
+</p>
 
 
 -  Plots the **RDF** of solution moleucules around functional groups.
@@ -111,7 +125,9 @@ p0 = [310, 250,  250]
 root = fsolve(f, x0 = p0[n], args = p)- p[2]
 ```
 -  Generates a comparative plot of water penetration depth and water density profiles across the three polymers.
-![image](https://github.com/user-attachments/assets/b03bde51-51f7-42bc-9b1a-4f5dedc9fa27)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b03bde51-51f7-42bc-9b1a-4f5dedc9fa27"  width="600"/>
+</p>
 
 
 
