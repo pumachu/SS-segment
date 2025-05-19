@@ -10,7 +10,6 @@ The three conjugated polymers investigated in this study—**P-2O**, **P-2SO<sub
 - `QM_GAS_PHASE/`: Contains Gaussian log files generated from neutral ground-state optimization calculations.
 - `BULK_MD/`: Provides sequential `mdp` and `gro` files used for generating bulk polymer structures for molecular dynamics (MD) simulations.
 - `SOLUTION_MD/`: Provides sequential `mdp` and `gro` files used for simulating the polymer-solvent interface in solution MD simulations. 
-- `TRAJECTORY/`: Contains `xtc` files resulting from the NPT trajectory of the polymer solution.
 
 ##  MD_SIMULATIONS
 This section details the workflow and files involved in our molecular dynamics simulations. The flowchart of the entire MD simulation procedure is provided below:
@@ -65,7 +64,7 @@ The definitions of $D_{\pi\text{--}\pi}$ and horizontal displacement are illustr
 -  Saves the stacking classification results in a **text file** for further analysis. (```PSO2-pipi.txt```)
 
 ###  3.  Functional Group's Solution Environment Analysis (```sol_RDF.ipynb```, ```sol_env.ipynb```)
--  Reads the `.tpr` and `.xtc` files from the `TRAJECTORY\` directory.
+-  Reads the `.tpr` and `.gro` files from the `SOLUTION_MD\` directory.
 -  Selects atoms corresponding to **functional groups** for analysis. The functinal groups used for each polymer are defined as follows:
 <p align="center">
   <img src="](https://github.com/user-attachments/assets/1718ad01-d6d9-4b62-89a9-4e1442404e3a"  width="650"/>
