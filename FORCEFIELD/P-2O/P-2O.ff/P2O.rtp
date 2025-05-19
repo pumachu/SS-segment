@@ -1,0 +1,237 @@
+[ bondedtypes ]
+;bonds angles dihedrals impropers
+ 1      1       3       2
+
+[ P2O ]
+ [ atoms ]
+  O1    P-2O_O1     -0.59788     2
+  S1    P-2O_S1      1.18522     3
+  O2    P-2O_O2     -0.59788     4
+  C1    P-2O_C1     -0.12214     5  ;
+  C2    P-2O_C2     -0.12480     6  ;;
+  C3    P-2O_C3      0.08133     7  ;;
+  C4    P-2O_C4     -0.12562     8  ;;
+  C5    P-2O_C5     -0.10834     9  ;
+  C6    P-2O_C6      0.04832    10
+  C7    P-2O_C7      0.03851    11
+  C8    P-2O_C8     -0.11327    12
+  C9    P-2O_C9     -0.12562    13  ;;
+  C10   P-2O_C10     0.08133    14  ;;
+  C11   P-2O_C11     0.02132    15  ;;;
+  C12   P-2O_C12    -0.10563    16  ;;;
+  C13   P-2O_C13    -0.22788    17
+  C14   P-2O_C14     0.28744    18
+  O3    P-2O_O3     -0.23084    19
+  C15   P-2O_C15     0.01313    20
+  C16   P-2O_C16     0.01313    21
+  O4    P-2O_O4     -0.23084    22
+  C17   P-2O_C17     0.28205    23
+  C18   P-2O_C18    -0.22106    24  ;
+  C19   P-2O_C19    -0.10563    25  ;;;
+  C20   P-2O_C20     0.02132    26  ;;;
+  C21   P-2O_C21    -0.10563    27  ;;;
+  C22   P-2O_C22    -0.22106    28  ;
+  C23   P-2O_C23    -0.22788    29
+  C24   P-2O_C24    -0.10563    30  ;;;
+  C25   P-2O_C25    -0.12480    31  ;;
+  C26   P-2O_C26    -0.13500    32
+  H2    P-2O_H2      0.12562    33
+  H3    P-2O_H3      0.10678    34
+  H4    P-2O_H4      0.11284    35
+  H5    P-2O_H5      0.11019    36
+  H6    P-2O_H6      0.10970    37
+  H7    P-2O_H7      0.10734    38
+  H8    P-2O_H8      0.12022    39
+  H9    P-2O_H9      0.07431    40
+  H10   P-2O_H10     0.07431    41
+  H11   P-2O_H11     0.07431    42
+  H12   P-2O_H12     0.07431    43
+  H13   P-2O_H13     0.11674    44
+  H14   P-2O_H14     0.10037    45
+  H15   P-2O_H15     0.10037    46
+  H16   P-2O_H16     0.11674    47
+  H17   P-2O_H17     0.12022    48
+  H18   P-2O_H18     0.10734    49
+  H19   P-2O_H19     0.13263    50
+ [ bonds ]
+  -C34   C3
+  O1   S1
+  S1   O2
+  S1   C1
+  S1   C26
+  C1   C2
+  C1   C6
+  C2   C3
+  C2   H2
+  C3   C4
+  C4   C5
+  C4   H3
+  C5   C6
+  C5   H4
+  C6   C7
+  C7   C8
+  C7   C26
+  C8   C9
+  C8   H5
+  C9   C10
+  C9   H6
+  C10  C11
+  C10  C25
+  C11  C12
+  C11  C24
+  C12  C13
+  C12  H7
+  C13  C14
+  C13  H8
+  C14  O3
+  C14  C23
+  O3   C15
+  C15  C16
+  C15  H9
+  C15  H10
+  C16  O4
+  C16  H11
+  C16  H12
+  O4   C17
+  C17  C18
+  C17  C22
+  C18  C19
+  C18  H13
+  C19  C20
+  C19  H14
+  C20  C21
+  C20  +C42
+  C21  C22
+  C21  H15
+  C22  H16
+  C23  C24
+  C23  H17
+  C24  H18
+  C25  C26
+  C25  H19
+
+ [ dihedrals ]
+  C9   C10  C11  C12  
+  C13  C14  O3   C15  
+  C14  O3   C15  C16  
+  O3   C15  C16  O4   
+  C15  C16  O4   C17  
+  C16  O4   C17  C18  
+
+ [ impropers ]
+  O1   S1   C1   C2   
+  O1   S1   C1   C6   
+  O2   S1   C1   C2   
+  O2   S1   C1   C6   
+  C26  S1   C1   C2   
+  C26  S1   C1   C6   
+  O1   S1   C26  C7   
+  O1   S1   C26  C25  
+  O2   S1   C26  C7   
+  O2   S1   C26  C25  
+  C1   S1   C26  C7   
+  C1   S1   C26  C25  
+  S1   C1   C2   C3   
+  S1   C1   C2   H2   
+  C6   C1   C2   C3   
+  C6   C1   C2   H2   
+  S1   C1   C6   C5   
+  S1   C1   C6   C7   
+  C2   C1   C6   C5   
+  C2   C1   C6   C7   
+  C1   C2   C3   -C34   
+  C1   C2   C3   C4   
+  H2   C2   C3   -C34   
+  H2   C2   C3   C4   
+  -C34   C3   C4   C5   
+  -C34   C3   C4   H3   
+  C2   C3   C4   C5   
+  C2   C3   C4   H3   
+  C3   C4   C5   C6   
+  C3   C4   C5   H4   
+  H3   C4   C5   C6   
+  H3   C4   C5   H4   
+  C4   C5   C6   C1   
+  C4   C5   C6   C7   
+  H4   C5   C6   C1   
+  H4   C5   C6   C7   
+  C1   C6   C7   C8   
+  C1   C6   C7   C26  
+  C5   C6   C7   C8   
+  C5   C6   C7   C26  
+  C6   C7   C8   C9   
+  C6   C7   C8   H5   
+  C26  C7   C8   C9   
+  C26  C7   C8   H5   
+  C6   C7   C26  S1   
+  C6   C7   C26  C25  
+  C8   C7   C26  S1   
+  C8   C7   C26  C25  
+  C7   C8   C9   C10  
+  C7   C8   C9   H6   
+  H5   C8   C9   C10  
+  H5   C8   C9   H6   
+  C8   C9   C10  C11  
+  C8   C9   C10  C25  
+  H6   C9   C10  C11  
+  H6   C9   C10  C25  
+  C9   C10  C25  C26  
+  C9   C10  C25  H19  
+  C11  C10  C25  C26  
+  C11  C10  C25  H19  
+  C10  C11  C12  C13  
+  C10  C11  C12  H7   
+  C24  C11  C12  C13  
+  C24  C11  C12  H7   
+  C10  C11  C24  C23  
+  C10  C11  C24  H18  
+  C12  C11  C24  C23  
+  C12  C11  C24  H18  
+  C11  C12  C13  C14  
+  C11  C12  C13  H8   
+  H7   C12  C13  C14  
+  H7   C12  C13  H8   
+  C12  C13  C14  O3   
+  C12  C13  C14  C23  
+  H8   C13  C14  O3   
+  H8   C13  C14  C23  
+  C13  C14  C23  C24  
+  C13  C14  C23  H17  
+  O3   C14  C23  C24  
+  O3   C14  C23  H17  
+  O4   C17  C18  C19  
+  O4   C17  C18  H13  
+  C22  C17  C18  C19  
+  C22  C17  C18  H13  
+  O4   C17  C22  C21  
+  O4   C17  C22  H16  
+  C18  C17  C22  C21  
+  C18  C17  C22  H16  
+  C17  C18  C19  C20  
+  C17  C18  C19  H14  
+  H13  C18  C19  C20  
+  H13  C18  C19  H14  
+  C18  C19  C20  C21  
+  C18  C19  C20  +C42  
+  H14  C19  C20  C21  
+  H14  C19  C20  +C42  
+  C19  C20  C21  C22  
+  C19  C20  C21  H15  
+  +C42  C20  C21  C22  
+  +C42  C20  C21  H15  
+  C20  C21  C22  C17  
+  C20  C21  C22  H16  
+  H15  C21  C22  C17  
+  H15  C21  C22  H16  
+  C14  C23  C24  C11  
+  C14  C23  C24  H18  
+  H17  C23  C24  C11  
+  H17  C23  C24  H18  
+  C10  C25  C26  S1   
+  C10  C25  C26  C7   
+  H19  C25  C26  S1   
+  H19  C25  C26  C7   
+
+  [ dihedrals ]
+   C19  C20  +C42  +C41
+ 

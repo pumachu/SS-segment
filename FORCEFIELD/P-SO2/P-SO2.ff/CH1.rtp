@@ -1,0 +1,10 @@
+[ bondedtypes ]
+; bonds   angles dihedrals impropers
+    1        1       3         2
+
+[ CH1 ]
+   [ atoms ]
+  H   CH3_H    0.17786     1
+
+ [ bonds ]
+  H  -C32

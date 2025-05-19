@@ -1,0 +1,22 @@
+  PTO_C34              PTO_C42             1       0.14683       247305.000 
+
+  PTO_C34              PTO_C42             PTO_C41             1   119.700       558.351    
+  PTO_C34              PTO_C42             PTO_C43             1   121.325       558.964  
+
+  PTO_C15             PTO_C35             PTO_C36             1   119.700       558.351
+  PTO_C15             PTO_C35             PTO_C46             1   121.325       558.964
+
+  PTO_C33             PTO_C34             PTO_C42             1     129.548       185.703
+  PTO_S4              PTO_C34             PTO_C42             1     120.516       351.988
+
+  PTO_S4  PTO_C34  PTO_C42  PTO_C43   3   10.74804201   0.60064169 -24.08503319   2.53684398  14.26965402  -1.72391018
+
+  PTO_C32             PTO_C33             PTO_C34             PTO_C42             2          180.000          23.592
+  PTO_H41             PTO_C33             PTO_C34             PTO_C42             2          0.000            32.370  
+  PTO_C42             PTO_C34             PTO_S4              PTO_C31             2        180.000           0.000  
+  PTO_C42             PTO_C34             PTO_S4              PTO_O1              2        -67.416          25.657
+  PTO_C42             PTO_C34             PTO_S4              PTO_O2              2         66.442          25.657
+  PTO_C40             PTO_C41             PTO_C42             PTO_C34              2         180.000          37.586
+  PTO_H45             PTO_C41             PTO_C42             PTO_C34              2          0.000          28.722
+  PTO_C34              PTO_C42             PTO_C43             PTO_C44             2        180.000         100.814
+  PTO_C34              PTO_C42             PTO_C43             PTO_H46             2          0.000          64.157
