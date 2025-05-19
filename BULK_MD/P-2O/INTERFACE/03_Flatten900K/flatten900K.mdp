@@ -1,0 +1,77 @@
+;Run Control Parameters
+integrator      = md
+nsteps          = 3400000
+dt              = 0.001
+tinit           = 0
+init_step       = 0
+comm-mode       = linear
+nstcomm         = 5
+
+;Output Control
+nstxout         = 10000
+nstvout         = 10000
+nstfout         = 10000
+nstcheckpoint   = 10000
+nstlog          = 10000
+nstenergy       = 10000
+nstxtcout       = 10000
+xtc-precision   = 10000
+
+;Bond Parameters
+constraints             = none
+constraint_algorithm    = Lincs
+continuation            = yes;no
+lincs_iter              = 1
+lincs_order             = 4
+lincs-warnangle         = 30
+
+;Neighborsearching Parameters
+cutoff_scheme            = Verlet
+ns_type                  = grid
+nstlist                  = 5
+pbc                      = xy
+rlist                    = 1.3
+domain-decomposition     = no
+
+;nwall
+nwall=2
+wall_type       = 12-6
+wall_r_linpot   = 0.0
+wall_atomtype   = opls_098 opls_098
+wall-ewald-zfac = 3
+
+;Electrostatics
+coulombtype         = PME
+rcoulomb            = 1.3
+rvdw                = 1.3
+DispCorr            = EnerPres
+fourierspacing      = 0.12
+pme_order           = 4
+ewald_rtol          = 1e-05
+ewald-geometry      = 3dc
+
+;Temperature Coupling
+tcoupl          = V-rescale
+tc-grps         = System
+tau_t           = 0.5
+ref_t           = 500
+
+;Pressure Coupling
+pcoupl          = Berendsen
+pcoupltype      = semiisotropic
+tau_p           = 0.5
+ref_p           = 1.0 1.0
+compressibility = 0.0 4.5e-5
+andersen_seed   = 815131
+
+;Velocity Generation
+gen_vel         = no
+gen_temp        = 300
+gen_seed        = 1993
+
+;Simulated Annealing
+annealing                = single
+annealing_npoints        = 3
+annealing_time           =   0  400   3400
+annealing_temp           = 500  900    900
+
