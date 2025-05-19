@@ -5,7 +5,7 @@ The three conjugated polymers investigated in this study—**P-2O**, **P-2SO<sub
 
 
 ##  Project Structure
-- `Analysis_and_run/`: Contains all scripts used for data analysis.
+- `ANALYSIS/`: Contains all scripts used for data analysis.
 - `FORCEFIELD/`: Includes topology files and forcefield parameters required for running GROMACS simulations.
 - `QM_GAS_PHASE/`: Contains Gaussian log files generated from neutral ground-state optimization calculations.
 - `BULK_MD/`: Provides sequential `mdp` and `gro` files used for generating bulk polymer structures for molecular dynamics (MD) simulations.
